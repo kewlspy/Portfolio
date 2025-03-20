@@ -10,7 +10,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/kewlspy",
   resume:
-    "https://drive.google.com/file/d/1ct8nMCwkvPfeZn4waE1CkXDuOI19sBeN/view?usp=sharing",
+    "https://drive.google.com/file/d/1ja5JUWZT1LNVlUogzI1-ay_c2HEqhC7W/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/engr-wak/",
   twitter: "https://twitter.com/kewlspy",
   insta: "https://www.instagram.com/kewlspy/",
@@ -35,6 +35,11 @@ export const skills = [
         name: "Next Js",
         image:
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACTklEQVR4Ab1XAaQqURB9DyohSykREpRIQSAlBCoECKUFCSRCBBEAaSEABQEoCIEASCwAUICALgCo83do0//9v819XX845O7VnDkzOzP7JWGaBd3C3IJpQVjAHeJ+Rs9a97vKLGrBsB1KgMhEP3FMUUwt4ENMfxr1yQIU4SSjRkbeOZtERmHk6pXQVDlnkHh9S+QLTm1hkiz4n/gzFQuny9FoFLquE+i34x+n02k0m00UCoV3BIzn3MMJrVYLtp1OJ0cS/X4f5/MZhmG8IyDsWtDfEaDIn2232/3zbrvdxuFwwGg04qRBt+VnETBNE0IIkE2n07/erdfrWK/X6Ha73Hb9ZXII3G43ivy3dNRqtZe7lUoFs9mM6oBDwCQCgquALT1FT3a5XF7qIZ/PYzgcolqtcggIIgBZAgRKB6lCRalp2uM8k8mAVMrlchwC+DEBipycE4n5fP44j8ViKJVKSCaTbAJCpgaez4vFIsjoWa/XA50FAgEkEgmEw2F2CkxZBZ5Br5tt1ITcbjd8Ph88Hg+7CBefECCsVitS4aVJcV9D/VMCVITk/Hq9YrPZyBBo2a1YMGvAcQYcj0cCtWMugcdYNhjDiBrP25mx3++x3W6RzWZZ8isfxzQLlsslJpMJpYY5jhkqcOH1ejEYDDAej9FoNOByuZxGsfqVzC7KTqcDSkkqleKsZOqX0mAwiHK5DGrJfr+fs5SqX8sjkQji8ThCoRC+v78Za7l6JagrUh3YkUuZpqgwDaecc9VYSDoV5Fg+at7n+eLN57kuE/EvzHr/Kvs31aYAAAAASUVORK5CYII=",
+      },
+      {
+        name: "TailwindCSS",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeKPw4CK4jcH7udsFHZdiB3iIOuI3fUCsxUZosXy4Y1yd25NA-dzCBPrSDIhg1BwObl3w&usqp=CAU",
       },
       {
         name: "HTML",
@@ -212,7 +217,7 @@ export const experiences = [
       "Mobile Application Development",
       "Firebase",
     ],
-    doc: "https://media.licdn.com/dms/image/C4E2DAQFkezFh2h6gvQ/profile-treasury-image-shrink_800_800/0/1657808956296?e=1722765600&v=beta&t=UveggKLxBN34j2KIEUoSB7BzeouOuJXEWtLb6ydOeOA",
+    // doc: "https://media.licdn.com/dms/image/C4E2DAQFkezFh2h6gvQ/profile-treasury-image-shrink_800_800/0/1657808956296?e=1722765600&v=beta&t=UveggKLxBN34j2KIEUoSB7BzeouOuJXEWtLb6ydOeOA",
   },
 
   {
@@ -240,7 +245,7 @@ export const education = [
 
   {
     id: 1,
-    img: "https://media.licdn.com/dms/image/C4E2DAQFkezFh2h6gvQ/profile-treasury-image-shrink_800_800/0/1657808956296?e=1722765600&v=beta&t=UveggKLxBN34j2KIEUoSB7BzeouOuJXEWtLb6ydOeOA",
+    // img: "https://media.licdn.com/dms/image/C4E2DAQFkezFh2h6gvQ/profile-treasury-image-shrink_800_800/0/1657808956296?e=1722765600&v=beta&t=UveggKLxBN34j2KIEUoSB7BzeouOuJXEWtLb6ydOeOA",
     school: "Nexussberry",
     date: "Apr 2022",
     grade: "Certified",
@@ -337,7 +342,7 @@ export const projects = [
     description:
       "Designed two applications for customer and Delivery boy using JAVA, with REST APIs, other with React-Native using different frameworks backend is designed on Node JS and deployed on cloud.App Is Currently In Playstore . This Project is part of Multivendor store which enables mineral water delivery boy to update deliveries, payment and other Live Data.",
     image:
-      "https://res.cloudinary.com/djj2zuaab/image/upload/fl_preserve_transparency/v1722252576/Screenshot_1641979012_his3es.jpg?_s=public-apps",
+      "https://res.cloudinary.com/djj2zuaab/image/upload/v1722252576/pani.png",
     tags: [
       "Android Studio",
       "Java",

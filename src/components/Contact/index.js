@@ -129,6 +129,17 @@ const ContactButton = styled.input`
   color: ${({ theme }) => theme.text_primary};
   font-size: 18px;
   font-weight: 600;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(150, 0, 255, 0.4);
+    opacity: 0.95;
+  }
+  &:active {
+    transform: translateY(1px) scale(0.97);
+    box-shadow: 0 2px 6px rgba(150, 0, 255, 0.2);
+    opacity: 0.9;
+  }
 `;
 
 const Contact = () => {
@@ -136,29 +147,69 @@ const Contact = () => {
   const [open, setOpen] = React.useState(false);
   const form = useRef();
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("Form submitted");
+  //   emailjs
+  //     .sendForm(
+  //       "service_utacrco",
+  //       "template_ogurm9f",
+  //       form.current,
+  //       "bs44JZzAcAKj2w12F"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         setOpen(true);
+  //         form.current.reset();
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  // };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted");
+
+    const formEl = form.current;
+    const formData = new FormData(formEl);
+
+    const fromEmail = formData.get("from_email")?.trim();
+    const fromName = formData.get("from_name")?.trim();
+    const subject = formData.get("subject")?.trim();
+    const message = formData.get("message")?.trim();
+
+    // Check for empty fields
+    if (!fromEmail || !fromName || !subject || !message) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    console.log("Sending email...");
+
     emailjs
       .sendForm(
         "service_utacrco",
         "template_ogurm9f",
-        form.current,
+        formEl,
         "bs44JZzAcAKj2w12F"
       )
       .then(
         (result) => {
-          setOpen(true);
-          form.current.reset();
+          console.log("Email successfully sent!");
+          setOpen(true); // Show success UI/modal/snackbar
+          formEl.reset();
         },
         (error) => {
-          console.log(error.text);
+          console.error("Email send error:", error.text);
+          alert(
+            "Something went wrong while sending the email. Please try again."
+          );
         }
       );
   };
 
   return (
-    <Container>
+    <Container id="contact">
       <Wrapper>
         <Title>Contact</Title>
         <Desc>
@@ -166,10 +217,15 @@ const Contact = () => {
         </Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
+          <ContactInput placeholder="Your Email" name="from_email" required />
+          <ContactInput placeholder="Your Name" name="from_name" required />
+          <ContactInput placeholder="Subject" name="subject" required />
+          <ContactInputMessage
+            placeholder="Message"
+            rows="4"
+            name="message"
+            required
+          />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
         <Snackbar

@@ -177,7 +177,7 @@ export const skills = [
     title: "Languages",
     skills: [
       {
-        name: "English IELTS: C1",
+        name: "English - C1",
         image:
           "https://1000logos.net/wp-content/uploads/2021/03/IELTS-logo.png",
       },

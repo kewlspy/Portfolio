@@ -1,53 +1,49 @@
 import React from "react";
 import styled from "styled-components";
 
-const Button = styled.button`
-  display: none;
-  width: 100%;
-  padding: 10px;
-  background-color: ${({ theme }) => theme.white};
-  color: ${({ theme }) => theme.text_black};
-  font-size: 14px;
-  font-weight: 700;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.8s ease-in-out;
-`;
 const Card = styled.div`
-  width: 330px;
-  height: 490px;
+  width: 320px;
   background-color: ${({ theme }) => theme.card};
   cursor: pointer;
-  border-radius: 10px;
-  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  border: 1px solid ${({ theme }) => theme.primary}22;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  padding: 26px 20px;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.35s ease;
   &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 50px 4px rgba(0, 0, 0, 0.6);
-    filter: brightness(1.1);
-  }
-  &:hover ${Button} {
-    display: block;
+    transform: translateY(-6px);
+    border-color: ${({ theme }) => theme.primary}55;
+    box-shadow: 0 12px 36px ${({ theme }) => theme.primary}20;
   }
 `;
 
+const ImageWrapper = styled.div`
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: ${({ theme }) => theme.card_light};
+  position: relative;
+`;
+
 const Image = styled.img`
-  //   width: 100%;
-  //   height: 180px;
-  height: 180px;
-  width: auto;
-  max-width: 100%;
-  display: block;
-  object-fit: contain;
-  background-color: ${({ theme }) => theme.white};
-  border-radius: 10px;
-  box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  ${Card}:hover & {
+    transform: scale(1.04);
+  }
+`;
+
+const Body = styled.div`
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
 `;
 
 const Tags = styled.div`
@@ -55,96 +51,80 @@ const Tags = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 4px;
+  gap: 6px;
 `;
 
 const Tag = styled.span`
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 11px;
+  font-weight: 600;
   color: ${({ theme }) => theme.primary};
-  background-color: ${({ theme }) => theme.primary + 15};
+  background-color: ${({ theme }) => theme.primary}18;
+  border: 1px solid ${({ theme }) => theme.primary}33;
   padding: 2px 8px;
-  border-radius: 10px;
+  border-radius: 8px;
+  font-family: 'Space Grotesk', sans-serif;
 `;
 
-const Details = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  padding: 0px 2px;
-`;
 const Title = styled.div`
-  font-size: 20px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
+  font-size: 16px;
+  font-weight: 700;
+  color: ${({ theme }) => theme.text_primary};
+  font-family: 'Space Grotesk', sans-serif;
   overflow: hidden;
   display: -webkit-box;
-  max-width: 100%;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 1.4;
 `;
 
-const Date = styled.div`
+const Client = styled.div`
   font-size: 12px;
-  margin-left: 2px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_secondary + 80};
-  @media only screen and (max-width: 768px) {
-    font-size: 10px;
-  }
+  font-weight: 500;
+  color: ${({ theme }) => theme.primary}cc;
 `;
 
 const Description = styled.div`
+  font-size: 13px;
   font-weight: 400;
-  color: ${({ theme }) => theme.text_secondary + 99};
+  color: ${({ theme }) => theme.text_secondary};
   overflow: hidden;
-  margin-top: 8px;
   display: -webkit-box;
-  max-width: 100%;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
+  line-height: 1.6;
 `;
 
-const Members = styled.div`
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
-`;
-const Avatar = styled.img`
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  margin-left: -10px;
-  background-color: ${({ theme }) => theme.white};
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border: 3px solid ${({ theme }) => theme.card};
+const Impact = styled.div`
+  font-size: 12px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.primary};
+  background: ${({ theme }) => theme.primary}10;
+  border: 1px solid ${({ theme }) => theme.primary}25;
+  border-radius: 8px;
+  padding: 6px 10px;
+  line-height: 1.5;
+  margin-top: auto;
 `;
 
 const ProjectCards = ({ project, setOpenModal }) => {
   return (
     <Card onClick={() => setOpenModal({ state: true, project: project })}>
-      <Image src={project.image} />
-      <Tags>
-        {project.tags?.map((tag, index) => (
-          <Tag>{tag}</Tag>
-        ))}
-      </Tags>
-      <Details>
+      <ImageWrapper>
+        <Image src={project.image} alt={project.title} />
+      </ImageWrapper>
+      <Body>
+        <Tags>
+          {project.tags?.slice(0, 4).map((tag, index) => (
+            <Tag key={index}>{tag}</Tag>
+          ))}
+        </Tags>
         <Title>{project.title}</Title>
-        <Date>{project.date}</Date>
+        {project.client && <Client>📍 {project.client}</Client>}
         <Description>{project.description}</Description>
-      </Details>
-      <Members>
-        {project.member?.map((member) => (
-          <Avatar src={member.img} />
-        ))}
-      </Members>
-      {/* <Button>View Project</Button> */}
+        {project.impact && <Impact>✦ {project.impact}</Impact>}
+      </Body>
     </Card>
   );
 };

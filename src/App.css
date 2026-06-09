@@ -1,41 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    
+    font-family: 'Inter', sans-serif;
 }
 
-html{
-  scroll-behavior: smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-  margin: 0px !important;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
+body {
+    margin: 0px !important;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
 }
 
-/* width */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 4px;
     height: 80px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background:#222A35;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #575C66;
+}
+
+::-webkit-scrollbar-track {
+    background: #060D1F;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 212, 255, 0.3);
     border-radius: 6px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #626970;
-  }
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 212, 255, 0.6);
+}

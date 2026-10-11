@@ -1,14 +1,16 @@
 export const Bio = {
   name: "Waqas Ahmed Khan",
   roles: [
-    "Full Stack Developer",
+    "Industrial IoT Engineer",
+    "Deployment Lead",
+    "Condition Monitoring Specialist",
     "Electronics Engineer",
-    "AI & Automation Builder",
-    "Industrial Tech Innovator",
-    "Manufacturing Specialist",
+    "Full Stack Developer",
   ],
   description:
-    "I bridge the gap between factory floors and cloud applications. With 11+ years in industrial manufacturing and 5+ years building enterprise software, I design and deploy technology that solves real production problems — because I've lived them firsthand.",
+    "Electronics engineer deploying Industrial IoT, condition monitoring and production-intelligence systems in high-precision, quality-critical manufacturing. I lead deployments for pharmaceutical, FMCG, beverage and energy clients such as GSK, Getz Pharma, PepsiCo and Shell. I bring 11+ years on the production floor and 5+ years of full-stack engineering, so I can take a project from sensor wiring to cloud dashboard.",
+  relocation: "Open to relocation: Germany · Luxembourg · EU",
+  languages: "English C1 (IELTS 7) · German A1",
   github: "https://github.com/kewlspy",
   resume:
     "https://drive.google.com/file/d/1ja5JUWZT1LNVlUogzI1-ay_c2HEqhC7W/view?usp=sharing",
@@ -24,6 +26,61 @@ export const Bio = {
 };
 
 export const skills = [
+  {
+    title: "Industrial IoT & Electronics",
+    skills: [
+      { name: "MQTT", image: "https://cdn.simpleicons.org/mqtt/ffffff" },
+      { name: "Modbus TCP / RTU", icon: "🔌" },
+      { name: "OPC-UA", icon: "🧩" },
+      { name: "RS485 / Fieldbus", icon: "🔗" },
+      { name: "Industrial IoT Gateways", icon: "📡" },
+      { name: "ESP32 / Embedded C", image: "https://cdn.simpleicons.org/espressif" },
+      {
+        name: "Arduino",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/512px-Arduino_Logo.svg.png",
+      },
+      { name: "PLC Programming", image: "https://cdn-icons-png.flaticon.com/512/2920/2920247.png" },
+      { name: "Industrial Sensors", icon: "🎯" },
+      { name: "Opto-isolated Signal Interfacing", icon: "⚡" },
+      { name: "Control Panel Wiring", icon: "🧰" },
+      { name: "Edge-to-Cloud Telemetry", icon: "☁️" },
+    ],
+  },
+  {
+    title: "Condition Monitoring & Manufacturing Systems",
+    skills: [
+      { name: "Condition Monitoring", icon: "🩺" },
+      { name: "Vibration Monitoring", icon: "📈" },
+      { name: "Predictive Maintenance", icon: "🛠️" },
+      { name: "MTTR / MTBF Analytics", icon: "⏱️" },
+      { name: "OEE Systems", image: "https://cdn-icons-png.flaticon.com/512/3281/3281289.png" },
+      { name: "MES Concepts", icon: "🏭" },
+      { name: "Commissioning & Validation", icon: "✅" },
+      { name: "SAP / ERP Integration", image: "https://cdn.simpleicons.org/sap" },
+      {
+        name: "Power BI",
+        image: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg",
+      },
+      {
+        name: "Node-RED",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Node-red-icon.png/512px-Node-red-icon.png",
+      },
+      { name: "TimescaleDB", image: "https://cdn.simpleicons.org/timescale" },
+    ],
+  },
+  {
+    title: "Quality & Continuous Improvement",
+    skills: [
+      { name: "Six Sigma Green Belt", image: "https://cdn-icons-png.flaticon.com/512/4228/4228570.png" },
+      { name: "Kaizen / TPM", image: "https://cdn-icons-png.flaticon.com/512/1534/1534996.png" },
+      { name: "ISO 9001:2015", image: "https://cdn-icons-png.flaticon.com/512/2965/2965358.png" },
+      { name: "Poka-Yoke / TQM", icon: "🎛️" },
+      { name: "Lean / 5S", icon: "📋" },
+      { name: "UAT & Acceptance Criteria", icon: "🧪" },
+    ],
+  },
   {
     title: "AI & Automation",
     skills: [
@@ -59,6 +116,8 @@ export const skills = [
         name: "Workflow Automation",
         image: "https://cdn-icons-png.flaticon.com/512/1476/1476735.png",
       },
+      { name: "Anthropic Claude API", image: "https://cdn.simpleicons.org/claude" },
+      { name: "n8n", image: "https://cdn.simpleicons.org/n8n" },
     ],
   },
   {
@@ -127,6 +186,7 @@ export const skills = [
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
       },
+      { name: "FastAPI", image: "https://cdn.simpleicons.org/fastapi" },
       {
         name: "MySQL",
         image:
@@ -191,55 +251,39 @@ export const skills = [
       },
     ],
   },
-  {
-    title: "Industrial & Engineering",
-    skills: [
-      {
-        name: "IoT / Arduino",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/512px-Arduino_Logo.svg.png",
-      },
-      {
-        name: "NodeRed",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Node-red-icon.png/512px-Node-red-icon.png",
-      },
-      {
-        name: "PLC Programming",
-        image: "https://cdn-icons-png.flaticon.com/512/2920/2920247.png",
-      },
-      {
-        name: "OEE Systems",
-        image: "https://cdn-icons-png.flaticon.com/512/3281/3281289.png",
-      },
-      {
-        name: "Six Sigma Green Belt",
-        image: "https://cdn-icons-png.flaticon.com/512/4228/4228570.png",
-      },
-      {
-        name: "Kaizen / TPM",
-        image: "https://cdn-icons-png.flaticon.com/512/1534/1534996.png",
-      },
-      {
-        name: "ISO 9001:2015",
-        image: "https://cdn-icons-png.flaticon.com/512/2965/2965358.png",
-      },
-      {
-        name: "ERP / MRP Systems",
-        image: "https://cdn-icons-png.flaticon.com/512/2920/2920277.png",
-      },
-    ],
-  },
 ];
 
 export const experiences = [
   {
     id: 0,
+    img: "",
+    icon: "📡",
+    role: "Deployment Lead — Industrial IoT & Condition Monitoring",
+    company: "Procheck Technologies",
+    location: "Karachi, Pakistan · Remote support for global client sites",
+    date: "August 2026 – Present",
+    desc: "Single technical owner for end-to-end Industrial IoT deployments in high-precision, quality-critical manufacturing environments, from site assessment to post-go-live support.",
+    highlights: [
+      "Lead deployments for pharmaceutical, FMCG, beverage and energy manufacturers, covering site assessment, solution design, commissioning, validation, user training and post-go-live support.",
+      "Deploy condition-monitoring and production-monitoring systems: vibration and proximity sensing, machine-state capture and MTTR/MTBF analytics for predictive maintenance.",
+      "Integrate shop-floor equipment with the cloud using MQTT and Modbus over industrial IoT gateways, with data pipelines that feed real-time dashboards and BI reporting.",
+      "Act as product owner for client-facing software enhancements: gather requirements from plant stakeholders, write scope and acceptance criteria, prioritise the backlog and run UAT on staging before release.",
+      "Configure web application deployments, REST API integrations, role-based access and dashboards against live production data, and remotely support client sites in other countries.",
+    ],
+    clients: ["GSK", "Getz Pharma", "Martin Dow", "Macter International", "CCL Pharmaceuticals", "PepsiCo", "Shell"],
+    skills: [
+      "Industrial IoT", "Condition Monitoring", "MQTT", "Modbus TCP/RTU", "IoT Gateways",
+      "Predictive Maintenance", "Commissioning & Validation", "Pharma / GMP Sites",
+      "Power BI", "REST APIs", "UAT", "Product Ownership",
+    ],
+  },
+  {
+    id: 1,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThHDnhy6oWAJap7X5apLNsjg_LfX4dSmkxPQ&s",
     role: "Full Stack Developer (Remote)",
     company: "Epicmetry, AHOY",
     location: "Dubai, UAE",
-    date: "October 2025 – Present",
+    date: "October 2025 – July 2026",
     desc: "Contributing to AI-oriented international projects and startups as a Full Stack developer primarily on React, JavaScript/TypeScript (MERN) and PHP Laravel. Building scalable backends with Node.js, PHP, Laravel, Java, Python, and REST APIs on AWS. Working with agentic AI tools and implementing AI-powered features. Collaborating with multicultural international teams using Agile/Scrum, Jira/Asana, Git, and GitLab.",
     skills: [
       "React JS", "TypeScript", "Node.js", "PHP", "Laravel", "AWS",
@@ -247,7 +291,18 @@ export const experiences = [
     ],
   },
   {
-    id: 1,
+    id: 2,
+    img: "",
+    icon: "✈️",
+    role: "Career Transition — Germany (Chancenkarte)",
+    company: "Opportunity Card Programme",
+    location: "Munich, Germany",
+    date: "February 2025 – October 2025",
+    desc: "Spent eight months in Munich on Germany's Opportunity Card (Chancenkarte), looking for engineering roles in the German industrial market, learning German (A1) and continuing a postgraduate diploma in Software Engineering.",
+    skills: ["German A1", "EU Job Market", "Continuous Learning"],
+  },
+  {
+    id: 3,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThHDnhy6oWAJap7X5apLNsjg_LfX4dSmkxPQ&s",
     role: "Full Stack Developer",
     company: "OpenSoft Technologies",
@@ -261,13 +316,13 @@ export const experiences = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnkVGFtkezeJmzHcoDUrl8D0yYh3LP_bDIZg&s",
     role: "Deputy Manager Production / Manufacturing",
     company: "Treet Group of Companies",
     location: "Hyderabad, Pakistan",
     date: "February 2014 – January 2025",
-    desc: "Led production operations for 11 years, driving major efficiency improvements through technology and process innovation. Designed and built a real-time IoT-based OEE monitoring system and made production reporting 100% paperless. Won Kaizen Award 2024 for a process redesign that reduced workforce by 20%. Cut energy consumption by 85%, reduced downtime by 70–80%, and saved PKR 10M through material reuse. Trained teams in Poka-Yoke, TQM, and ISO 9001:2015.",
+    desc: "Led production operations for 11 years in a high-precision, high-volume manufacturing environment with tight quality tolerances, driving major efficiency improvements through technology and process innovation. Designed and built a real-time IoT-based OEE monitoring system and made production reporting 100% paperless. Won Kaizen Award 2024 for a process redesign that reduced workforce by 20%. Cut energy consumption by 85%, reduced downtime by 70–80%, and saved PKR 10M through material reuse. Trained teams in Poka-Yoke, TQM, and ISO 9001:2015.",
     skills: [
       "IoT / Arduino", "React JS", "Node.js", "Firebase", "Google Cloud",
       "Production Planning", "Six Sigma Green Belt", "Kaizen", "TPM / 5S",
@@ -362,7 +417,29 @@ export const achievements = [
   },
 ];
 
+export const industries = [
+  { icon: "💊", name: "Pharmaceutical", clients: ["GSK", "Getz Pharma", "Martin Dow", "Macter International", "CCL Pharmaceuticals"] },
+  { icon: "🥤", name: "FMCG & Beverage", clients: ["PepsiCo"] },
+  { icon: "⛽", name: "Energy", clients: ["Shell"] },
+  { icon: "🔩", name: "High-Precision Manufacturing", clients: ["Treet Group"] },
+];
+
 export const services = [
+  {
+    title: "Industrial IoT & Condition Monitoring",
+    icon: "📡",
+    featured: true,
+    description:
+      "End-to-end IIoT deployments in regulated, quality-critical plants. I take a project from sensor selection and panel wiring through gateway configuration to cloud dashboards, then commission and validate it on site.",
+    items: [
+      "Condition Monitoring & Vibration Sensing",
+      "Predictive Maintenance (MTTR / MTBF)",
+      "MQTT · Modbus TCP/RTU · OPC-UA · RS485 Integration",
+      "Industrial IoT Gateway & Edge-to-Cloud Pipelines",
+      "Commissioning, Validation & UAT",
+      "Real-time Production Dashboards & BI Reporting",
+    ],
+  },
   {
     title: "Custom Manufacturing Software",
     icon: "🏭",
@@ -505,5 +582,7 @@ export const TimeLineData = [
   { year: 2021, text: "Launched PaaniWalay.com — full multi-vendor platform" },
   { year: 2022, text: "Joined OpenSoft Technologies as Full Stack Developer" },
   { year: 2024, text: "Won Kaizen Continuous Improvement Award" },
+  { year: 2025, text: "Moved to Munich, Germany on the Opportunity Card (Chancenkarte)" },
   { year: 2025, text: "Joined Epicmetry (Dubai) as Full Stack Developer — AI projects" },
+  { year: 2026, text: "Joined Procheck Technologies as Deployment Lead — Industrial IoT for pharma, FMCG & energy" },
 ];

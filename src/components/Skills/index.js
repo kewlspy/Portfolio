@@ -138,6 +138,13 @@ const SkillImage = styled.img`
   object-fit: contain;
 `;
 
+const SkillIcon = styled.span`
+  width: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+`;
+
 const Skills = () => {
   return (
     <Container id="skills">
@@ -145,7 +152,7 @@ const Skills = () => {
         <SectionLabel>Technical Expertise</SectionLabel>
         <Title>Skills</Title>
         <Desc>
-          Spanning AI & automation, full-stack development, cloud infrastructure, and industrial engineering.
+          From field instrumentation and industrial protocols to condition monitoring, cloud platforms and full-stack software.
         </Desc>
         <SkillsContainer>
           {skills.map((skill, index) => (
@@ -154,7 +161,11 @@ const Skills = () => {
               <SkillList>
                 {skill.skills.map((item, i) => (
                   <SkillItem key={i}>
-                    <SkillImage src={item.image} alt={item.name} />
+                    {item.image ? (
+                      <SkillImage src={item.image} alt={item.name} />
+                    ) : (
+                      <SkillIcon aria-hidden="true">{item.icon}</SkillIcon>
+                    )}
                     {item.name}
                   </SkillItem>
                 ))}

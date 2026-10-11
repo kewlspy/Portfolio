@@ -68,6 +68,11 @@ const Card = styled.div`
   transition: all 0.35s ease;
   position: relative;
   overflow: hidden;
+  ${({ featured, theme }) => featured && `
+    grid-column: 1 / -1;
+    border-color: ${theme.primary}55;
+    background: linear-gradient(135deg, ${theme.primary}14 0%, ${theme.card} 55%);
+  `}
   &::before {
     content: '';
     position: absolute;
@@ -114,6 +119,14 @@ const ItemList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 8px;
+  ${({ featured }) => featured && `
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 24px;
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  `}
 `;
 
 const Item = styled.li`
@@ -209,19 +222,20 @@ const Services = () => {
   return (
     <Container id="services">
       <Wrapper>
-        <SectionLabel>What I Offer</SectionLabel>
-        <Title>Services</Title>
+        <SectionLabel>What I Bring</SectionLabel>
+        <Title>Core Expertise</Title>
         <Subtitle>
-          I build software for problems I've spent 11 years living. Here's what I can do for you.
+          11+ years on the production floor, now applied to the connected systems that keep
+          high-precision plants running, measured and audit-ready.
         </Subtitle>
 
         <Grid>
           {services.map((service, index) => (
-            <Card key={index}>
+            <Card key={index} featured={service.featured}>
               <CardIcon>{service.icon}</CardIcon>
               <CardTitle>{service.title}</CardTitle>
               <CardDesc>{service.description}</CardDesc>
-              <ItemList>
+              <ItemList featured={service.featured}>
                 {service.items.map((item, i) => (
                   <Item key={i}>{item}</Item>
                 ))}
@@ -235,8 +249,8 @@ const Services = () => {
             <BannerBadge>🚀 Concept · Proposal Phase</BannerBadge>
             <BannerTitle>AI-Powered Production Planning Platform</BannerTitle>
             <BannerText>
-              Developing a proposal for an AI-assisted production planning platform for manufacturing
-              companies in Pakistan and the region — replacing manual Excel scheduling with AI-driven
+              Developing a proposal for an AI-assisted production planning platform for manufacturers.
+              It would replace manual Excel scheduling with AI-driven
               plans, real-time bottleneck prediction, what-if scenario simulation, and live operational
               dashboards customised to each facility's machines and data.
             </BannerText>

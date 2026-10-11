@@ -118,6 +118,36 @@ const Span = styled.span`
   text-overflow: ellipsis;
 `;
 
+const HighlightList = styled.ul`
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: ${({ theme }) => theme.text_secondary};
+  li::marker {
+    color: ${({ theme }) => theme.primary};
+  }
+  @media only screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+`;
+
+const ClientsRow = styled.div`
+  font-size: 13px;
+  line-height: 1.6;
+  color: ${({ theme }) => theme.text_primary};
+  b {
+    color: ${({ theme }) => theme.primary};
+    font-weight: 600;
+  }
+  @media only screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+`;
+
 const SkillsRow = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -142,7 +172,7 @@ const ExperienceCard = ({ experience }) => {
         {experience.img ? (
           <Image src={experience.img} alt={experience.company} />
         ) : (
-          <ImagePlaceholder>🏢</ImagePlaceholder>
+          <ImagePlaceholder>{experience.icon || '🏢'}</ImagePlaceholder>
         )}
         <Body>
           <Role>{experience.role}</Role>
@@ -155,6 +185,18 @@ const ExperienceCard = ({ experience }) => {
         <Description>
           <Span>{experience.desc}</Span>
         </Description>
+      )}
+      {experience.highlights && experience.highlights.length > 0 && (
+        <HighlightList>
+          {experience.highlights.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </HighlightList>
+      )}
+      {experience.clients && experience.clients.length > 0 && (
+        <ClientsRow>
+          <b>Clients:</b> {experience.clients.join(' · ')}
+        </ClientsRow>
       )}
       {experience.skills && experience.skills.length > 0 && (
         <SkillsRow>

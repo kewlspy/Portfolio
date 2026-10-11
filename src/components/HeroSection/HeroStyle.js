@@ -181,7 +181,7 @@ export const Span = styled.span`
 export const SubTitle = styled.div`
   font-size: 18px;
   line-height: 1.7;
-  margin-bottom: 36px;
+  margin-bottom: 20px;
   color: ${({ theme }) => theme.text_secondary};
   @media (max-width: 960px) {
     text-align: center;
@@ -190,6 +190,20 @@ export const SubTitle = styled.div`
   @media (max-width: 640px) {
     font-size: 14px;
     line-height: 1.6;
+  }
+`;
+
+export const Relocation = styled.div`
+  font-size: 15px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_primary};
+  margin-bottom: 32px;
+  font-family: 'Space Grotesk', sans-serif;
+  @media (max-width: 960px) {
+    text-align: center;
+  }
+  @media (max-width: 640px) {
+    font-size: 14px;
   }
 `;
 

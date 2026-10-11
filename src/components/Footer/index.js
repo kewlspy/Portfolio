@@ -119,7 +119,7 @@ function Footer() {
           </SocialIcon>
         </SocialRow>
         <Copyright>
-          &copy; 2025 Waqas Ahmed Khan · PEC Registered Engineer ELECTRO/16504 · Karachi, Pakistan
+          &copy; {new Date().getFullYear()} Waqas Ahmed Khan · PEC Registered Engineer ELECTRO/16504 · Karachi, Pakistan · Open to relocation (DE · LU · EU)
         </Copyright>
       </FooterWrapper>
     </FooterContainer>

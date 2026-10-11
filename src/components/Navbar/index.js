@@ -36,7 +36,7 @@ const Navbar = () => {
           >
             <IoLocationSharp size="1.4rem" color={theme.primary} />
             <Span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "15px" }}>
-              Karachi, Pakistan
+              Karachi, PK · Open to EU relocation
             </Span>
           </a>
         </NavLogo>

@@ -273,8 +273,9 @@ const Contact = () => {
           <Title>Contact</Title>
           <Divider />
           <Intro>
-            Whether you have a project in mind, want to discuss the AI production planning platform,
-            or just want to connect — I'd love to hear from you.
+            I am open to Industrial IoT, condition-monitoring, MES/automation and deployment-engineering
+            roles in Germany, Luxembourg and across the EU. Whether you're hiring or just want to connect,
+            I'd love to hear from you.
           </Intro>
 
           <ContactInfoList>
